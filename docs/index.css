@@ -1,0 +1,469 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+.transitionCustom{
+transition: all 0.7s ease-in-out !important;
+}
+#pointer{
+    position: absolute;
+    transform: translate(-50% , -50%);
+    z-index: 11;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease-out; 
+
+}
+.black{
+    color: black !important;
+}
+
+/* Hamburger */
+.icon {
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background: #000;
+    cursor: none;
+    transition: all 0.2s linear; 
+}
+.icon:hover{
+    background-color: #fff;
+    transition: all 0.2s ease-in-out; 
+
+}
+.icon:hover .hamburger , .icon:hover .hamburger:before ,
+.icon:hover .hamburger:after{
+    background-color: #000;
+    transition: all 0.2s ease-in-out; 
+}
+.hamburger{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.hamburger:before ,
+.hamburger:after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+}
+.hamburger:before {
+    top: -10px;
+}
+.hamburger:after {
+    top: 10px;
+}
+.active .hamburger{
+    transform: rotate(25deg);
+    left: 10px;
+    top: 20px;
+}
+
+
+/* Hamburger */
+
+
+#particles-js{
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    height: 40vh;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
+
+}
+#secondMenu{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#secondMenu ul{
+    float: left;
+}
+#secondMenu ul li:nth-child(1){
+    margin: 0 20px 0 0;
+}
+#secondMenu ul li{
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    margin: 0 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+#menu-line{
+position: absolute;
+display: block;
+width: 46px;
+height: 3px;
+background-color: #000;
+transition: all 0.4s ease-in-out;
+}
+
+.landing{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background-image: url("landing.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.wrapper{
+    opacity: 0;
+    font-size: 1.2rem;
+    max-width: 700px;
+    position: absolute;
+    z-index: 1;
+    margin: 50px 0 0 5%;
+    color: #000;
+    transition: all 0.4s ease-in-out;   
+}
+#overflow{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.3;
+    transition: all 0.2s ease-in-out;   
+}
+
+
+#about{
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    text-align: center;  
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    transition: all 0.3s ease-in-out;  
+}
+.Awrapper-flex{
+    margin-top: 50px;
+    display: block;
+    max-width: 1000px;
+}
+#myImage{
+    width: 300px;
+    height: 300px;
+}
+.Wwrapper-flex{
+    margin-top: 50px;
+    display: flex;
+    max-width: 1000px;
+}
+
+
+
+
+#about-wrapper{
+    margin-top: 100px;
+    opacity: 0;
+    display: none;
+    transition: all 0.2s ease-in-out;   
+}
+#myWorks-wrapper{
+    margin-top: 70px;
+    display: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;   
+}
+#Contact-wrapper{
+    margin-top: 70px;
+    display: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;   
+}
+#Contact-wrapper h1{
+    margin-bottom: 20px !important;
+}
+
+#Contact-text{
+    width: 100%;
+    text-align: left;
+    background-color: #000;
+    padding: 20px;
+}
+#Contact-text .text{
+    flex: 5;
+}
+
+
+
+
+#map{
+    display: block;
+    height: 300px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Contact-icons{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 50px;
+}
+.Contact-icons ul{
+    padding: 0;
+float: left;
+}
+.Contact-icons ul li{
+    cursor: pointer;
+    list-style: none;
+    float: right;
+    margin: 0 20px;
+}
+.Contact-icons ul li:nth-child(4){
+    margin: 0 10px 0 0;
+}
+
+
+#Contact-text p{
+    color: #fff;
+    margin: 0 !important;
+    font-size: 1rem !important;
+}
+video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10 !important;
+}
+.card {
+    display: inline-block;
+    height: 400px;
+    width: 30%;
+    margin: 0 30px;
+    border: 0.5px solid black;
+    box-shadow: -25px 25px #000;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+.card:hover{
+    margin-top: -10px;
+}
+.card .image{
+height: 200px;
+}
+.card .text{
+text-align: left;
+}
+.card p{
+    font-size: 0.9rem !important;
+    line-height: 22px !important;
+    margin: 0 5px !important;
+}
+.card h2{
+    margin: 10px 0;
+}
+.background{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.site-1{
+    background-image: url(Tchami.jpg);
+}
+.site-2{
+    background-image: url(Tchami.jpg);
+}
+.site-3{
+    background-image: url(Tchami.jpg);
+}
+
+
+#about-wrapper ul{
+    float: left;
+    padding: 0;
+}
+.icons{   
+    display: flex;
+    justify-content: center;
+}
+#about-wrapper ul li{
+    margin: 0 20px;
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+   cursor: pointer;
+}
+#about-wrapper ul li:nth-child(1){
+    margin: 0 20px 0 0;
+}
+
+#about h1{
+    font-size: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+#about p{
+    font-size: 1.1rem;
+    line-height: 30px; 
+    margin: 40px 40px;
+    max-width: 960px;
+}
+
+.mainMenu{
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    transition: all 0.7s ease-out;
+    font-size: 5vw;
+    padding: 0 10%;
+    
+}
+
+.homeDescription{
+    transition: all 0.2s ease-out;
+    opacity: 0;
+    flex: 4;
+    color: #fff;
+    z-index: 10;
+    font-size: 1.8vw;
+}
+.mainMenuLi{
+    transition: all 0.2s ease-out;
+}
+.mainMenuLi span{
+    transition: all 0.2s ease-out;
+}
+#mainMenuUl{
+flex: 8;
+z-index: 12;
+width: 500px;
+color: white;
+mix-blend-mode: difference;
+}
+
+
+
+
+
+/* JavaScript */
+
+
+.landingTransition{
+    top: -50px;
+    opacity: 0;
+}
+.mainMenu-active{
+top: 0;
+transition: all 0.7s ease-out;
+}
+
+
+
+/* Media */
+
+@media screen and (min-width: 350px){
+    .Contact-icons{
+        justify-content: center
+    }
+    .Contact-icons ul{
+        padding: 0;
+    }
+    #map{
+        height: 250px;
+    }
+    .text{
+        text-align: center;
+    }
+}
+@media screen and (min-width: 600px){ 
+    #map{
+        width: 600px;
+        height: 250px !important;
+    }
+    .Wwrapper-flex{
+        margin-top: 20px;
+        display: flex !important;
+    }
+    .Wwrapper-flex .card{
+        width: 30% !important;
+    }
+}
+@media screen and (min-width: 800px){
+    .Awrapper-flex{
+        display: flex;
+    } 
+    #myImage{
+        width: 400px;
+        height: 400px;
+    }
+    #map{
+        width: 800px;
+        height: 250px !important;
+    }
+}
+@media screen and (min-width: 300px){  
+    
+    #map{
+        height: 230px;
+    }
+    .Contact-icons ul li{
+       margin: 0 10px;
+    }
+    #secondMenu ul{
+        padding: 0;
+    }
+    #secondMenu ul li{
+        margin: 0 10px;
+    }
+    .Wwrapper-flex{
+        display: block;
+    }
+    .Wwrapper-flex .card{
+        margin-bottom: 60px;
+        width: 80%;
+    }
+}
